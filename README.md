@@ -5,7 +5,7 @@ This is a Dockerfile to set up (https://plex.tv/ "Plex Media Server") - (https:/
 Build from docker file
 
 ```
-git clone git@github.com:timhaak/docker-plex.git
+git clone git@github.com:captnbp/docker-plex.git
 cd docker-plex
 docker build -t plex .
 ```
@@ -13,19 +13,19 @@ docker build -t plex .
 You can also obtain it via:
 
 ```
-docker pull timhaak/plex
+docker pull captnbp/plex
 ```
 
 ---
 Instructions to run:
 
 ```
-docker run -d -h *your_host_name* -v /*your_config_location*:/config -v /*your_videos_location*:/data -p 32400:32400  plex
+docker run -d -h *your_host_name* -v /*your_config_location*:/config -v /*your_videos_location*:/media -p 32400:32400  plex
 ```
 or for auto detection add --net="host". Though be aware this more insecure but should be fine on your personal servers.
 
 ```
-docker run -d --net="host" -h *your_host_name* -v /*your_config_location*:/config -v /*your_videos_location*:/data -p 32400:32400  plex
+docker run -d --net="host" -h *your_host_name* -v /*your_config_location*:/config -v /*your_videos_location*:/media -p 32400:32400  plex
 ```
 
 The first time it runs, it will initialize the config directory and terminate.
