@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
-#Thanks to https://github.com/bydavy/docker-plex/blob/master/Dockerfile and https://github.com/aostanin/docker-plex/blob/master/Dockerfile
-MAINTAINER Tim Haak <tim@haak.co.uk>
+#Thanks to https://github.com/bydavy/docker-plex/blob/master/Dockerfile and https://github.com/aostanin/docker-plex/blob/master/Dockerfile and Tim Haak !
+MAINTAINER Benoît Pourre <benoit.pourre@gmail.com>
 
 RUN apt-get -q update
 RUN apt-get -qy --force-yes dist-upgrade
